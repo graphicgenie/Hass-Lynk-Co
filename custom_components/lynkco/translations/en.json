@@ -3,50 +3,26 @@
     "abort": {
       "already_configured": "This device is already configured.",
       "reauth_failed": "Re-authentication failed. Please try again.",
+      "no_vins_found": "No vehicles found for your account.",
+      "reauth_successful": "Re-authentication successful.",
       "unexpected_error": "An unexpected error occurred."
     },
     "error": {
-      "invalid_redirect_uri": "The provided redirect URI is invalid. Please check and try again.",
-      "invalid_email": "The provided email is invalid. Please check and try again.",
-      "invalid_2fa_code": "The provided 2FA code is invalid. Please check and try again.",
+      "invalid_redirect_uri": "Invalid redirect URI. It should start with 'msauth://prod.lynkco.app.crisp.prod/'",
+      "missing_details": "Missing required information. Please try again.",
       "login_failed": "Login failed. Please check your credentials and try again."
     },
     "step": {
-      "user": {
-        "menu_options": {
-          "direct_login": "Direct Login",
-          "redirect_login": "Redirect Login"
-        },
-        "menu_option_descriptions": {
-          "direct_login": "Standard way, login with email and password. Try this first.",
-          "redirect_login": "If direct login fails, use this method which requires browser interaction."
-        }
-      },
-      "direct_login": {
-        "title": "Direct Login",
-        "description": "Please enter your credentials.",
-        "data": {
-          "email": "Email Address",
-          "password": "Password"
-        }
-      },
-      "direct_login_2fa": {
-        "title": "2FA Verification",
-        "description": "Enter the 2FA code.",
-        "data": {
-          "2fa": "Two-Factor Authentication Code"
-        }
-      },
       "redirect_login": {
-        "title": "Redirect Login",
-        "description": "Open the following URL in your browser to authorize. Once finished, grab and input the redirect uri in the field below: {auth_url}",
+        "title": "Lynk & Co Login",
+        "description": "**Step 1:** Click the link below to open Lynk & Co login:\n\n[Open Lynk & Co Login]({auth_url})\n\n**Step 2:** Log in with your Lynk & Co account (email, password, and complete any verification).\n\n**Step 3:** After login, your browser will try to redirect to a URL starting with `msauth://...` - this will fail to open (that's expected).\n\n**Step 4:** Copy the **entire URL** from your browser's address bar and paste it below.",
         "data": {
-          "redirect_uri": "Redirect URI"
+          "redirect_uri": "Paste the msauth:// URL here"
         }
       },
       "reauth": {
         "title": "Re-authentication Required",
-        "description": "Please re-enter your credentials to re-authenticate."
+        "description": "Your Lynk & Co session has expired. Please log in again."
       }
     }
   },
